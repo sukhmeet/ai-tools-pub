@@ -155,7 +155,8 @@ class ClaudeProfileManager:
         token = profile_file.read_text().strip()
         
         if self._set_current_token(token):
-            print(f"Cycled to profile: {next_profile}")
+            from_profile = current_name if current_name else "unknown"
+            print(f"Cycled from profile: {from_profile} to: {next_profile}")
             return True
         return False
     

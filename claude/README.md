@@ -30,6 +30,12 @@ A cross-platform Python script for managing multiple Claude Code authentication 
 
 ## Usage
 
+### Important Notes
+
+**To save a profile**: You must be logged into Claude Code first. The tool captures your current authentication session and saves it as a profile.
+
+**To switch profiles**: Once profiles are saved, you can switch between them without needing to log in/out manually. The tool handles authentication switching automatically.
+
 ### Command Line Options
 
 ```bash
@@ -64,10 +70,10 @@ claude-profile --help
 ### Examples
 
 ```bash
-# Save your work account
+# First, log into Claude Code with your work account, then save it
 claude-profile --save work
 
-# Save your personal account  
+# Log into Claude Code with your personal account, then save it
 claude-profile --save personal
 
 # Switch to work account (short form)
